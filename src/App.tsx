@@ -8,7 +8,8 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
+import RNBootSplash from 'react-native-bootsplash';
 import {
   SafeAreaView,
   ScrollView,
@@ -61,6 +62,12 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {}, [
+    (() => {
+      RNBootSplash.hide({fade: true});
+    })(),
+  ]);
 
   return (
     <SafeAreaView style={backgroundStyle}>
