@@ -12,6 +12,10 @@ target 'pokedex' do
     :hermes_enabled => false
   )
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  pod 'RNTextGradientView', :path => '../node_modules/react-native-text-gradient'
+
   target 'pokedexTests' do
     inherit! :complete
     # Pods for testing
